@@ -1,0 +1,13 @@
+server:
+  port: 8100
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://my.config.con:5001/eureka/
+      defaultZone: http://192.168.1.66:5001/eureka/
+spring:
+  application:
+    name: springcloud-emp-consumer-feign
+feign:
+  hystrix:
+    enabled: true

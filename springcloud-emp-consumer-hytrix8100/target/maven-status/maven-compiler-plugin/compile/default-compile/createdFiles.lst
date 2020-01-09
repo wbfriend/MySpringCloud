@@ -1,0 +1,5 @@
+com\my\springcloud\hytrix\controller\EmpHytrixController.class
+com\my\springcloud\hytrix\service\EmpClientService.class
+com\my\springcloud\hytrix\service\EmpClientServiceFallbackFactory$1.class
+com\my\springcloud\hytrix\SpringcloudEmpConsumerHytrix8100Application.class
+com\my\springcloud\hytrix\service\EmpClientServiceFallbackFactory.class

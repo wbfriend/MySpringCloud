@@ -1,0 +1,26 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: springcloud-emp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.66:3366/spring_cloud?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+  #eureka主机名，会在控制页面中显示
+eureka:
+  instance:
+    hostname: localhost
+    #eureka服务器页面中status的请求路径
+    status-page-url: http://${eureka.instance.hostname}:${server.port}/emp/
+  #eureka注册中心服务器地址
+  client:
+    service-url:
+#      defaultZone: http://my.config.con:5001/eureka/
+      defaultZone: http://192.168.1.66:5001/eureka/
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+logging:
+    level:
+      com.my.springcloud.emp: debug

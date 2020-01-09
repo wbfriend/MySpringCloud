@@ -1,0 +1,27 @@
+#服务端口
+server:
+  port: 8002
+  #eureka主机名，会在控制页面中显示
+eureka:
+  instance:
+    hostname: localhost
+    #eureka服务器页面中status的请求路径
+    status-page-url: http://${eureka.instance.hostname}:${server.port}/dept
+  #eureka注册中心服务器地址
+  client:
+    service-url:
+      defaultZone: http://192.168.1.66:5001/eureka/
+  #服务名
+spring:
+  application:
+    name: springcloud-dept
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.66:3366/spring_cloud_01?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    com.my.springcloud.dept: debug

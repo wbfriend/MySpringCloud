@@ -1,0 +1,3 @@
+com\my\springcloud\consumer\service\DeptConsumerService.class
+com\my\springcloud\consumer\controller\DeptConsumerController.class
+com\my\springcloud\consumer\SpringcloudDeptConsumerApplication.class

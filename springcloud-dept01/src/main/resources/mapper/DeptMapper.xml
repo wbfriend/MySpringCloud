@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.my.springcloud.dept.mapper.DeptMapper">
+    <sql id="sql_common_list">
+        id,dept_name deptName,dept_no deptNo,source,createTime,moditiyTime
+    </sql>
+    <select id="getFindById" resultType="com.my.springcloud.api.entity.dept.Dept" parameterType="java.lang.Integer">
+        select
+        <include refid="sql_common_list"/>
+        from dept where id = #{id}
+    </select>
+    <select id="selectDeptList" resultType="com.my.springcloud.api.entity.dept.Dept" parameterType="java.util.Map">
+        select
+        <include refid="sql_common_list"/>
+        from dept limit #{page},#{pageSize}
+    </select>
+    <select id="selectDeptCount" resultType="java.lang.Integer">
+        select count(1) from dept
+    </select>
+</mapper>

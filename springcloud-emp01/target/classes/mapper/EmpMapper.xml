@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.my.springcloud.emp.mapper.EmpMapper">
+    <sql id="sql_common_list">
+        id,emp_name empName,emp_phone empPhone,emp_job empJob,emp_no empNo,createTime,moditiyTime
+    </sql>
+    <select id="getFindById" resultType="com.my.springcloud.api.entity.emp.Emp" parameterType="java.lang.Integer">
+        select <include refid="sql_common_list"/> from  emp where id = #{id}
+    </select>
+    <select id="selectEmpList" resultType="com.my.springcloud.api.entity.emp.Emp" parameterType="java.util.Map">
+        select <include refid="sql_common_list"/> from  emp limit #{page},#{pageSize}
+    </select>
+    <select id="selectEmpCount" resultType="java.lang.Integer">
+         select count(1) from emp
+    </select>
+</mapper>

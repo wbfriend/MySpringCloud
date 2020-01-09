@@ -1,0 +1,28 @@
+server:
+  port: 6001
+
+#服务的名称
+spring:
+  application:
+    name: springcloud-zuul
+
+#指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.66:5001/eureka/
+
+#自定义路由映射
+zuul:
+  routes:
+    springcloud-dept:
+      serviceId: springcloud-dept-consumer   #访问服务名字
+      path: /dept/**   #统一路径
+    springcloud-emp:
+      serviceId: springcloud-emp-consumer   #访问服务名字
+      path: /emp/**   #统一路径
+  prefix: /api   #前缀
+  ignored-services: "*"  #禁用所有的真实服务名称
+
+
+

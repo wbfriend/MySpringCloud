@@ -1,0 +1,14 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: springcloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wbfriend/springcloud-config.git
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.66:5001/eureka/

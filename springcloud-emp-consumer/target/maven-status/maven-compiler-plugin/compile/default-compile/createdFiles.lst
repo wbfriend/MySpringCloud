@@ -1,0 +1,3 @@
+com\my\springcloud\consumer\controller\EmpController.class
+com\my\springcloud\consumer\SpringcloudEmpConsumerApplication.class
+com\my\springcloud\consumer\service\EmpService.class

@@ -1,0 +1,11 @@
+com\my\springcloud\api\entity\emp\Emp.class
+com\my\springcloud\api\common\enums\EnumSet.class
+com\my\springcloud\api\common\util\GsonUtils.class
+com\my\springcloud\api\hytrix\service\emp\EmpClientService.class
+com\my\springcloud\api\hytrix\service\emp\EmpClientServiceFallbackFactory$1.class
+com\my\springcloud\api\common\util\PageUtils.class
+com\my\springcloud\api\common\util\ResultUtil.class
+com\my\springcloud\api\entity\dept\Dept.class
+com\my\springcloud\api\common\util\StringUtils.class
+com\my\springcloud\api\hytrix\service\emp\EmpClientServiceFallbackFactory.class
+com\my\springcloud\api\hytrix\service\dept\DeptClientService.class

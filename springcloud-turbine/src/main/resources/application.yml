@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: springcloud-dashboard-turbine
+turbine:
+  app-config: SPRINGCLOUD-DEPT-CONSUMER,SPRINGCLOUD-EMP-CONSUMER
+  cluster-name-expression: new String("default")
+  aggregator:
+      cluster-config: default
+  combine-host-port: true
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.66:5001/eureka/

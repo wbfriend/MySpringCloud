@@ -1,0 +1,21 @@
+server:
+  port: 8100
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.66:5001/eureka/
+spring:
+  application:
+    name: springcloud-emp-consumer
+#暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+feign:
+  hystrix:
+    enabled: true
